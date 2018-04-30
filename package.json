@@ -1,7 +1,7 @@
 {
   "name": "bootstrap-rfs",
   "description": "The most popular front-end framework for developing responsive, mobile first projects on the web + RFS.",
-  "version": "4.1.0.0-dev",
+  "version": "4.1.0-dev.0",
   "keywords": [
     "css",
     "sass",
