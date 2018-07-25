@@ -21,7 +21,10 @@
       "font-size": ["/\\$/", "/px/", "/rem/"]
     },
     "font-family-name-quotes": "always-where-recommended",
-    "font-weight-notation": "numeric",
+    "font-weight-notation": [
+      "numeric", {
+        "ignore": ["relative"]
+    }],
     "function-url-no-scheme-relative": true,
     "function-url-quotes": "always",
     "length-zero-no-unit": true,

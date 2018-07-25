@@ -21,30 +21,30 @@ h5, .h5 { @include responsive-font-size($h5-font-size); }
 h6, .h6 { @include responsive-font-size($h6-font-size); }
 
 .lead {
-  @include responsive-font-size($lead-font-size);
   font-weight: $lead-font-weight;
+  @include responsive-font-size($lead-font-size);
 }
 
 // Type display classes
 .display-1 {
-  @include responsive-font-size($display1-size);
   font-weight: $display1-weight;
   line-height: $display-line-height;
+  @include responsive-font-size($display1-size);
 }
 .display-2 {
-  @include responsive-font-size($display2-size);
   font-weight: $display2-weight;
   line-height: $display-line-height;
+  @include responsive-font-size($display2-size);
 }
 .display-3 {
-  @include responsive-font-size($display3-size);
   font-weight: $display3-weight;
   line-height: $display-line-height;
+  @include responsive-font-size($display3-size);
 }
 .display-4 {
-  @include responsive-font-size($display4-size);
   font-weight: $display4-weight;
   line-height: $display-line-height;
+  @include responsive-font-size($display4-size);
 }
 
 
@@ -66,8 +66,8 @@ hr {
 
 small,
 .small {
-  @include responsive-font-size($small-font-size);
   font-weight: $font-weight-normal;
+  @include responsive-font-size($small-font-size);
 }
 
 mark,

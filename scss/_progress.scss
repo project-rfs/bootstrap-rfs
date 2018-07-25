@@ -7,8 +7,8 @@
   display: flex;
   height: $progress-height;
   overflow: hidden; // force rounded corners by cropping it
-  @include responsive-font-size($progress-font-size);
   background-color: $progress-bg;
+  @include responsive-font-size($progress-font-size);
   @include border-radius($progress-border-radius);
   @include box-shadow($progress-box-shadow);
 }

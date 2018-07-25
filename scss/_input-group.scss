@@ -21,16 +21,23 @@
     width: 1%;
     margin-bottom: 0;
 
-    // Bring the "active" form control to the top of surrounding elements
-    &:focus {
-      z-index: 3;
-    }
-
     + .form-control,
     + .custom-select,
     + .custom-file {
       margin-left: -$input-border-width;
     }
+  }
+
+  // Bring the "active" form control to the top of surrounding elements
+  > .form-control:focus,
+  > .custom-select:focus,
+  > .custom-file .custom-file-input:focus ~ .custom-file-label {
+    z-index: 3;
+  }
+
+  // Bring the custom file input above the label
+  > .custom-file .custom-file-input:focus {
+    z-index: 4;
   }
 
   > .form-control,
@@ -92,7 +99,6 @@
   align-items: center;
   padding: $input-padding-y $input-padding-x;
   margin-bottom: 0; // Allow use of <label> elements by overriding our default margin-bottom
-  @include responsive-font-size($font-size-base); // Match inputs
   font-weight: $font-weight-normal;
   line-height: $input-line-height;
   color: $input-group-addon-color;
@@ -100,6 +106,7 @@
   white-space: nowrap;
   background-color: $input-group-addon-bg;
   border: $input-border-width solid $input-group-addon-border-color;
+  @include responsive-font-size($font-size-base); // Match inputs
   @include border-radius($input-border-radius);
 
   // Nuke default margins from checkboxes and radios to vertically center within.
@@ -120,7 +127,11 @@
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
 .input-group-lg > .input-group-append > .btn {
-  @extend .form-control-lg;
+  height: $input-height-lg;
+  padding: $input-padding-y-lg $input-padding-x-lg;
+  line-height: $input-line-height-lg;
+  @include responsive-font-size($font-size-lg);
+  @include border-radius($input-border-radius-lg);
 }
 
 .input-group-sm > .form-control,
@@ -128,7 +139,11 @@
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn,
 .input-group-sm > .input-group-append > .btn {
-  @extend .form-control-sm;
+  height: $input-height-sm;
+  padding: $input-padding-y-sm $input-padding-x-sm;
+  line-height: $input-line-height-sm;
+  @include responsive-font-size($font-size-sm);
+  @include border-radius($input-border-radius-sm);
 }
 
 
