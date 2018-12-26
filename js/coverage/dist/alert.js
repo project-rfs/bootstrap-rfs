@@ -1,13 +1,13 @@
 /*!
-  * Bootstrap alert.js v4.1.3 (https://getbootstrap.com/)
+  * Bootstrap alert.js v4.2.1 (https://getbootstrap.com/)
   * Copyright 2011-2018 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('jquery'), require('./util.js')) :
   typeof define === 'function' && define.amd ? define(['jquery', './util.js'], factory) :
-  (global.Alert = factory(global.jQuery,global.Util));
-}(this, (function ($,Util) { 'use strict';
+  global.Alert = factory(global.jQuery,global.Util);
+}(typeof self !== 'undefined' ? self : this, function ($,Util) { 'use strict';
 
   $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
   Util = Util && Util.hasOwnProperty('default') ? Util['default'] : Util;
@@ -1298,20 +1298,13 @@
     return coverage[path] = coverageData;
   }();
   /**
-   * --------------------------------------------------------------------------
-   * Bootstrap (v4.1.3): alert.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-
-  /**
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
    */
 
   var NAME = (cov_k2uabk027.s[0]++, 'alert');
-  var VERSION = (cov_k2uabk027.s[1]++, '4.1.3');
+  var VERSION = (cov_k2uabk027.s[1]++, '4.2.1');
   var DATA_KEY = (cov_k2uabk027.s[2]++, 'bs.alert');
   var EVENT_KEY = (cov_k2uabk027.s[3]++, "." + DATA_KEY);
   var DATA_API_KEY = (cov_k2uabk027.s[4]++, '.data-api');
@@ -1384,8 +1377,8 @@
       $.removeData(this._element, DATA_KEY);
       cov_k2uabk027.s[19]++;
       this._element = null;
-    }; // Private
-
+    } // Private
+    ;
 
     _proto._getRootElement = function _getRootElement(element) {
       cov_k2uabk027.f[4]++;
@@ -1457,8 +1450,8 @@
       cov_k2uabk027.f[8]++;
       cov_k2uabk027.s[37]++;
       $(element).detach().trigger(Event.CLOSED).remove();
-    }; // Static
-
+    } // Static
+    ;
 
     Alert._jQueryInterface = function _jQueryInterface(config) {
       cov_k2uabk027.f[9]++;
@@ -1553,5 +1546,5 @@
 
   return Alert;
 
-})));
+}));
 //# sourceMappingURL=alert.js.map

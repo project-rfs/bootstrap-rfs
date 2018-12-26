@@ -1,13 +1,13 @@
 /*!
-  * Bootstrap button.js v4.1.3 (https://getbootstrap.com/)
+  * Bootstrap button.js v4.2.1 (https://getbootstrap.com/)
   * Copyright 2011-2018 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('jquery')) :
   typeof define === 'function' && define.amd ? define(['jquery'], factory) :
-  (global.Button = factory(global.jQuery));
-}(this, (function ($) { 'use strict';
+  global.Button = factory(global.jQuery);
+}(typeof self !== 'undefined' ? self : this, function ($) { 'use strict';
 
   $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
 
@@ -1394,20 +1394,13 @@
     return coverage[path] = coverageData;
   }();
   /**
-   * --------------------------------------------------------------------------
-   * Bootstrap (v4.1.3): button.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-
-  /**
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
    */
 
   var NAME = (cov_2ylbqbdfo.s[0]++, 'button');
-  var VERSION = (cov_2ylbqbdfo.s[1]++, '4.1.3');
+  var VERSION = (cov_2ylbqbdfo.s[1]++, '4.2.1');
   var DATA_KEY = (cov_2ylbqbdfo.s[2]++, 'bs.button');
   var EVENT_KEY = (cov_2ylbqbdfo.s[3]++, "." + DATA_KEY);
   var DATA_API_KEY = (cov_2ylbqbdfo.s[4]++, '.data-api');
@@ -1420,7 +1413,7 @@
   var Selector = (cov_2ylbqbdfo.s[7]++, {
     DATA_TOGGLE_CARROT: '[data-toggle^="button"]',
     DATA_TOGGLE: '[data-toggle="buttons"]',
-    INPUT: 'input',
+    INPUT: 'input:not([type="hidden"])',
     ACTIVE: '.active',
     BUTTON: '.btn'
   });
@@ -1550,8 +1543,8 @@
       $.removeData(this._element, DATA_KEY);
       cov_2ylbqbdfo.s[35]++;
       this._element = null;
-    }; // Static
-
+    } // Static
+    ;
 
     Button._jQueryInterface = function _jQueryInterface(config) {
       cov_2ylbqbdfo.f[4]++;
@@ -1648,5 +1641,5 @@
 
   return Button;
 
-})));
+}));
 //# sourceMappingURL=button.js.map

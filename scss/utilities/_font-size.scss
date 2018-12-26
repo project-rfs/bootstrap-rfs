@@ -1,7 +1,0 @@
-// Utility classes for responsive font sizes.
-
-@each $key, $responsive-font-size in $responsive-font-sizes {
-  .rfs-#{$key} {
-    @include font-size($responsive-font-size, true);
-  }
-}
